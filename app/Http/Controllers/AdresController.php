@@ -28,13 +28,10 @@ class AdresController extends Controller
     {
         $request->validate([
             'naam' => 'required|string|max:255|unique:adressen,naam,NULL,id,user_id,' . Auth::id(),
-            'straat' => 'required|string|max:255',
-            'huisnummer' => 'required|string|max:10',
-            'postcode' => ['required', 'string', 'regex:/^\d{4}\s?[A-Za-z]{2}$/'],
-            'stad' => 'required|string|max:255',
+            'adres' => 'required|string|max:255',
         ]);
 
-        Auth::user()->adressen()->create($request->only('naam', 'straat', 'huisnummer', 'postcode', 'stad'));
+        Auth::user()->adressen()->create($request->only('naam',  'adres'));
 
         return redirect()->route('adressen.index')->with('success', 'Adres toegevoegd!');
     }
@@ -51,10 +48,7 @@ class AdresController extends Controller
     {
         $request->validate([
             'naam' => 'required|string|max:255',
-            'straat' => 'required|string|max:255',
-            'huisnummer' => 'required|string|max:10',
-            'postcode' => 'required|string|max:10',
-            'stad' => 'required|string|max:255',
+            'adres' => 'required|string|max:255',
         ]);
 
         $adres = Adres::findOrFail($id);

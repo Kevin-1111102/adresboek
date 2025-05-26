@@ -10,7 +10,7 @@ class Adres extends Model
 
     protected $table = 'adressen';
 
-    protected $fillable = ['naam', 'straat', 'huisnummer', 'postcode', 'stad'];
+    protected $fillable = ['naam', 'adres'];
 
     public function user()
     {

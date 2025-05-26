@@ -13,28 +13,11 @@
                 @error('naam')<div class="invalid-feedback">{{ $message }}</div>@enderror
             </div>
 
-            <div class="mb-3">
-                <label for="straat" class="form-label">Straat</label>
-                <input type="text" name="straat" id="straat" class="form-control @error('straat') is-invalid @enderror" value="{{ old('straat') }}" required>
-                @error('straat')<div class="invalid-feedback">{{ $message }}</div>@enderror
-            </div>
 
             <div class="mb-3">
-                <label for="huisnummer" class="form-label">Huisnummer</label>
-                <input type="text" name="huisnummer" id="huisnummer" class="form-control @error('huisnummer') is-invalid @enderror" value="{{ old('huisnummer') }}" required>
-                @error('huisnummer')<div class="invalid-feedback">{{ $message }}</div>@enderror
-            </div>
-
-            <div class="mb-3">
-                <label for="postcode" class="form-label">Postcode</label>
-                <input type="text" name="postcode" id="postcode" class="form-control @error('postcode') is-invalid @enderror" value="{{ old('postcode') }}" required>
-                @error('postcode')<div class="invalid-feedback">{{ $message }}</div>@enderror
-            </div>
-
-            <div class="mb-3">
-                <label for="stad" class="form-label">Stad</label>
-                <input type="text" name="stad" id="stad" class="form-control @error('stad') is-invalid @enderror" value="{{ old('stad') }}" required>
-                @error('stad')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                <label for="adrs" class="form-label">adres</label>
+                <input type="text" name="adres" id="adres" class="form-control @error('adres') is-invalid @enderror" value="{{ old('adres') }}" required>
+                @error('adres')<div class="invalid-feedback">{{ $message }}</div>@enderror
             </div>
 
             <button type="submit" class="btn btn-primary">Opslaan</button>
