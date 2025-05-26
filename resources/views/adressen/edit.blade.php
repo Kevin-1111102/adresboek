@@ -18,7 +18,7 @@
             <div class="mb-3">
                 <label for="adres" class="form-label">adres</label>
                 <input type="text" name="adres" id="adres" class="form-control @error('adres') is-invalid @enderror"
-                       value="{{ old('adres', $adres->straat) }}" required>
+                       value="{{ old('adres', $adres->adres) }}" required>
                 @error('adres')<div class="invalid-feedback">{{ $message }}</div>@enderror
             </div>
 
